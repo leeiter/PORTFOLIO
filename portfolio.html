@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PORTFOLIO SAMPLE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./swiper.min.css" />
+    <script src="./swiper.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 1.5rem;
+        font-family: "NEXON Lv1 Gothic OTF";
+      }
+
+      @font-face {
+        font-family: "NEXON Lv1 Gothic OTF Bold";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "NEXON Lv1 Gothic OTF";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "NEXON Lv1 Gothic OTF Light";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      hr {
+        width: 1600px;
+        margin: 0 auto;
+        border: 1px solid rgb(16, 123, 185);
+      }
+
+      .header {
+        padding: 10px 16px;
+        background: rgb(16, 123, 185);
+        color: #fdfdfd;
+        z-index: 10;
+      }
+
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .sticky + .content {
+        padding-top: 102px;
+      }
+
+      .hash-tag {
+        padding: 0 10px;
+      }
+
+      .my-info {
+        margin: 120px 0;
+      }
+
+      .my-info-l {
+        margin-right: 40px;
+      }
+
+      .my-info-r {
+        margin-bottom: 40px;
+      }
+
+      .my-img {
+        width: 220px;
+        height: 220px;
+      }
+
+      .my-info-p {
+        font-size: 0.7rem;
+        padding: 0 20px;
+      }
+
+      .my-info-p a {
+        font-size: 0.7rem;
+        color: black;
+      }
+
+      .my-info-p a:hover {
+        color: rgb(16, 123, 185);
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      h2 {
+        font-family: "NEXON Lv1 Gothic OTF Bold";
+        font-size: 3rem;
+        color: rgb(16, 123, 185);
+        margin: 110px 0;
+      }
+
+      h4 {
+        font-size: 0.9rem;
+        margin: 20px 0;
+      }
+
+      .swiper-container {
+        height: 570px;
+      }
+
+      .sw-co-3 {
+        height: 430px;
+      }
+
+      .sw-co-5 {
+        height: 430px;
+      }
+
+      .swiper-container {
+        position: relative;
+        width: 40%;
+      }
+
+      .swiper-slide > img {
+        display: block;
+        width: 100%;
+      }
+
+      .portpolio-3,
+      .portpolio-4,
+      .portpolio-5 {
+        margin-top: 70px;
+      }
+
+      .hr-bar {
+        margin-top: 150px;
+      }
+
+      .my-intro {
+        margin-top: 120px;
+      }
+
+      h3 {
+        font-family: "NEXON Lv1 Gothic OTF Bold";
+        font-size: 1.7rem;
+        color: rgb(16, 123, 185);
+        margin-bottom: 30px;
+      }
+
+      .my-intro-p, .my-intro-p span {
+        font-size: 0.7rem;
+      }
+
+      h5 {
+        font-family: "NEXON Lv1 Gothic OTF Bold";
+        font-size: 3.5rem;
+        color: rgb(16, 123, 185);
+        margin: 130px 0;
+      }
+    </style>
+
+    <script>
+      $(function () {
+        window.onscroll = function () {
+          myFunction();
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+
+        var swiper = new Swiper(".swiper-container", {
+          pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <div class="text-center">
+        <span class="hash-tag">#노력</span>
+        <span class="hash-tag">#발전</span>
+        <span class="hash-tag">#열정</span>
+        <span class="hash-tag">#한결</span>
+        <span class="hash-tag">#개발</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="row justify-content-center my-info">
+        <div class="my-info-l">
+          <img class="my-img" src="./images/github.png" />
+        </div>
+        <div class="my-info-r">
+          <p class="my-info-p">이세진(LEE SE JIN)</p>
+          <p class="my-info-p">HP : 010-5808-8151</p>
+          <p class="my-info-p">ADDRESS : 광주광역시</p>
+          <p class="my-info-p">EMAIL : iterlees@gmail.com</p>
+          <p class="my-info-p">
+            GITHUB :
+            <a href="https://github.com/leeiter">https://github.com/leeiter</a>
+          </p>
+        </div>
+      </div>
+      <hr />
+      <div class="portpolio">
+        <div class="portpolio-header">
+          <h2 class="text-center">PORTFOLIO</h2>
+        </div>
+        <div class="portpolio-2">
+          <h4 class="text-center">우리애를 부탁해</h4>
+          <div class="ppt-2">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-1.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-2.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-3.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-4.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-5.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-6.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-7.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-8.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-9.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-10.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-11.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-12.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-13.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-14.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-15.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-16.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-17.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_2/slide2-18.PNG" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portpolio-3">
+          <h4 class="text-center">READBOOK</h4>
+          <div class="ppt-3">
+            <div class="swiper-container sw-co-3">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-1.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-2.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-3.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-4.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-5.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-6.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-7.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-8.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-9.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-10.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-11.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-12.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-13.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-14.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-15.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-16.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_3/slide3-17.PNG" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+        <div class="portpolio-4">
+          <h4 class="text-center">SECURITY</h4>
+          <div class="ppt-4">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-1.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-2.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-3.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-4.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-5.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-6.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-7.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-8.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-9.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-10.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-11.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-12.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-13.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-14.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-15.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-16.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-17.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-18.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-19.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-20.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-21.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-22.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-23.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-24.PNG" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/ppt_4/slide4-25.PNG" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portpolio-5">
+        <h4 class="text-center">NAVIYA</h4>
+        <div class="ppt-5">
+          <div class="swiper-container sw-co-5">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-4.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-5.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-6.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-7.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-8.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-9.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-10.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-11.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-12.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-13.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-14.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-15.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-16.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-17.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-18.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-19.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-20.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-21.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-22.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-23.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-24.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-25.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-26.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-27.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-28.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-29.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-30.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-31.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-32.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-33.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-34.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-35.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-36.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-37.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-38.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-39.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-40.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-41.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-42.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-43.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-44.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-45.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-46.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/ppt_5/slide5-47.jpg" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <hr class="hr-bar" />
+      <div class="my-intro">
+        <div class="my-intro-box text-center">
+          <h3>악력</h3>
+          <p class="my-intro-p">2007.03 ~ 2010.02 : <span>전남여자상업고등학교 졸업</span></p>
+          <p class="my-intro-p">2009.10 ~ 2012.11 : <span>LG이노텍</span></p>
+          <p class="my-intro-p">2013.03 ~ 2015.02 : <span>동강대학교 호텔조리영양학과 졸업</span></p>
+          <p class="my-intro-p">2015.02 ~ 2016.02 : <span>동강대학교</span></p>
+          <p class="my-intro-p">2017.01 ~ 2017.06 : <span>디지털 스마트문화앱 웹디자이너 양성과정 이수</span></p>
+          <p class="my-intro-p">2018.05 ~ 2019.02 : <span>리더스</span></p>
+          <p class="my-intro-p">2019.08 ~ 2020.06 : <span>자바기반 응용SW엔지니어리닝 웹/앱 개발자 양성과정 이수 중</span></p>
+        </div>
+        <hr class="hr-bar" />
+        <div class="my-intro my-skill-box text-center">
+          <h3>보유기술</h3>
+          <p class="my-intro-p">Java : <span>Java 1.8 기반 프로그래밍 언어 활용기술</span></p>
+          <p class="my-intro-p">Spring Framework : <span>Spring Framewrok 4, 5 기반 MVC 프로젝트 구축, 공공 DB OpenAPI 활용 프로젝트 경험, Security 적용 경험</span></p>
+          <p class="my-intro-p">Oracle SQL : <span>Oracle 11g 활용한 Tablespace, Table, Sequence 작성가능 CRUD, Join, SubQuery 작성가능</span></p>
+          <p class="my-intro-p">MY-SQL : <span>MyBatis DB와 연동하여 동적쿼리 구현 가능</span></p>
+          <p class="my-intro-p">JavaScript : <span>Web 환경 인터렉티브 구축 JS 이벤트 핸들링</span></p>
+          <p class="my-intro-p">jQuery : <span>Ajax 활용 RESTFul Front-end 개발</span></p>
+          <p class="my-intro-p">HTML5 : <span>Semantic HTML 5 Web 화면 구현</span></p>
+          <p class="my-intro-p">Bootstrap, CSS : <span>반응형 UI 구현, CSS3 HTML5 기반 CSS 디자인 화면구현</span></p>
+        </div>
+      </div>
+      <hr class="hr-bar" />
+      <h5 class="text-center">감사합니다.</h5>
+    </div>    
+  </body>
+</html>
